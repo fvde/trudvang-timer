@@ -1,6 +1,7 @@
 var timerActive = true;
 var timerId;
 var timePassed;
+var alert;
 
 function startTimer(duration, display) {
     var timer = duration;
@@ -15,12 +16,15 @@ function startTimer(duration, display) {
 
         if (--timer < 0) {
             display.textContent = "00:00"
-            document.getElementById('alert').play();
+            alert.play();
         }
     }, 1000);
 }
 
 function start() {
+    alert = document.getElementById('alert');
+    alert.play();
+    alert.pause();
     newTimer(document.getElementById('breathDuration').value);
 }
 
