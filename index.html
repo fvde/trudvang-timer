@@ -9,7 +9,7 @@ body {
   margin-top: 0px;
 }
 p {
-  font-size: 30px;
+  font-size: 40px;
 }
 .button {
   background-color: #4CAF50; /* Green */
@@ -19,7 +19,7 @@ p {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 18px;
   margin: 4px 2px;
   cursor: pointer;
 }
@@ -46,13 +46,14 @@ tr:nth-child(even) {
 
 </head>
 <body>
+    <p>Air left for <span id="time">05:00</span> minutes...</p>
     <audio id="alert" src="alert.mp3" preload="auto"></audio>
     <button class="button buttonBlack" onclick="start();" type="button">Start</button>
     <button class="button buttonBlue" onclick="pause();" id="pauseButton" type="button">Pause</button>
     <button class="button" onclick="add(10);" type="button">Add 10 Seconds</button>
     <button class="button buttonRed" onclick="remove(10);" type="button">Remove 10 Seconds</button>
     <button class="button buttonRed" onclick="remove(30);" type="button">Remove 30 Seconds</button>
-    <p>Air left for <span id="time">05:00</span> minutes...</p>
+    
     <h2>Character Details</h2>
 
     <table>
