@@ -45,6 +45,13 @@ function remove(seconds) {
 
 function pause() {
     timerActive = !timerActive;
+    var button = document.getElementById('pauseButton');
+
+    if (timerActive) {
+        button.textContent = "Pause";
+    } else {
+        button.textContent = "Continue";
+    }
 };
 
 function update(timer, display) {
