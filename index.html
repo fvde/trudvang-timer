@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: arial, sans-serif;
+  text-align: center;
+  margin-top: 0px;
+}
+p {
+  font-size: 30px;
+}
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.buttonBlue {background-color: #008CBA;} /* Blue */
+.buttonRed {background-color: #f44336;} /* Red */ 
+.buttonBlack {background-color: #555555;} /* Black */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+
+<script src="timer.js"></script>
+
+</head>
+<body>
+    <audio id="alert" src="alert.mp3" preload="auto"></audio>
+    <button class="button buttonBlack" onclick="start();" type="button">Start</button>
+    <button class="button buttonBlue" onclick="pause();" type="button">Pause</button>
+    <button class="button" onclick="add(10);" type="button">Add 10 Seconds</button>
+    <button class="button buttonRed" onclick="remove(10);" type="button">Remove 10 Seconds</button>
+    <button class="button buttonRed" onclick="remove(30);" type="button">Remove 30 Seconds</button>
+    <p>Air left for <span id="time">05:00</span> minutes...</p>
+    <h2>Character Details</h2>
+
+    <table>
+    <tr>
+        <th>Property</th>
+        <th>Value</th>
+        <th>Explanation</th>
+    </tr>
+    <tr>
+        <td>Breathing in seconds</td>
+        <td>
+            <input type="number" id="breathDuration" value="270">
+        </td>
+        <td>(1 + constitution modifier) x 60 * 1.5</td>
+    </tr>
+    <tr>
+        <td>Walking distance underwater in tiles</td>
+        <td>
+            <input type="number" value="3">
+        </td>
+        <td>Land walking distance / 2, rounded down to next multiple of 5</td>
+    </tr>
+    <tr>
+        <td>Cost of talking or casting spells underwater in seconds</td>
+        <td>
+            <input type="number" value="30">
+        </td>
+        <td>While not under the effect of water breathing air escapes the lungs when casting or speaking</td>
+    </tr>
+    </table>
+</body>
+</html>
